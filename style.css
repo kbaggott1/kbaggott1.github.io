@@ -7,3 +7,9 @@ h1 {
     text-align: center;
     flex: content;
 }
+
+p {
+    background-color: white;
+    text-align: center;
+    -ms-flex-align: center;
+}
