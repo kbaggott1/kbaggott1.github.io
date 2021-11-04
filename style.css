@@ -11,8 +11,8 @@ h1 {
 
 .firstdiv {
     display: flexbox;
-    border-radius: 50px;
-    background-color: deepskyblue;
+    border-radius: 40px;
+    background-color: rgb(189, 187, 206);
     padding-top: 4px;
     margin: auto;
     width: 1000px;
