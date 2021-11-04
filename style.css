@@ -10,7 +10,8 @@ h1 {
 
 
 .firstdiv {
-    display: inline-block;
+    display: block;
+    border-radius: 50px;
     background-color: white;
     padding-top: 4px;
     margin: auto;
