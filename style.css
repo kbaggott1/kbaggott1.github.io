@@ -8,9 +8,10 @@ h1 {
     flex: content;
 }
 
-p {
+
+.firstdiv {
     background-color: white;
-    text-align: center;
-    width: 400px;
-    -ms-flex-align: center;
+    margin: auto;
+    width: 800;
+    
 }
