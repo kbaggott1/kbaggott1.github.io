@@ -10,7 +10,7 @@ h1 {
 
 
 .firstdiv {
-    display: flex;
+    display: flexbox;
     border-radius: 50px;
     background-color: deepskyblue;
     padding-top: 4px;
