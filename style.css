@@ -10,7 +10,7 @@ h1 {
 
 
 .firstdiv {
-    display: block;
+    display: flex;
     border-radius: 50px;
     background-color: white;
     padding-top: 4px;
