@@ -10,11 +10,12 @@ h1 {
 
 
 .firstdiv {
-    display: block;
+    display: inline-block;
     background-color: white;
     padding-top: 4px;
     margin: auto;
     width: 800px;
     height: 800px;
     text-align: center;  
+    
 }
