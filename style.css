@@ -1,6 +1,6 @@
 body {
     background-image: url("email-pattern.png");
-    display: block;
+    min-height: 100%;
 }
 
 h1 {
