@@ -42,7 +42,13 @@ h1 {
 
 .menu-button {
     margin-left: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     background-color: rgb(80, 79, 79);
     border-style: none;
     height: 25px;
+}
+
+#firstbutton {
+    margin-left: 10px;
 }
