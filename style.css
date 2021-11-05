@@ -24,7 +24,7 @@ h1 {
 }
 
 .wrapper {
-    display: box;
+    display: flexbox;
     width: auto;
     height: auto;
 }
