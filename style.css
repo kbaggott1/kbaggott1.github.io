@@ -42,4 +42,5 @@ h1 {
 .menu-button {
     margin-left: 4px;
     background-color: rgb(80, 79, 79);
+    border-style: none;
 }
