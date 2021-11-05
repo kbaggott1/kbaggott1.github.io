@@ -23,8 +23,6 @@ h1 {
     
 }
 
-.wrapper {
-    display: block;
-    width: auto;
-    height: auto;
+#wrapper {
+size-adjust: auto;
 }
