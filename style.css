@@ -1,6 +1,13 @@
+
+
+
 body {
     background-image: url("email-pattern.png");
-    height: 100%;
+    min-height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
 }
 
 h1 {
@@ -23,6 +30,3 @@ h1 {
     
 }
 
-#wrapper {
-    min-height: 100%;
-}
