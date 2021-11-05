@@ -40,6 +40,6 @@ h1 {
 }
 
 .menu-button {
-    
-    border-radius: 50px;
+    margin-left: 4px;
+    background-color: rgb(80, 79, 79);
 }
