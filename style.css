@@ -55,4 +55,5 @@ h1 {
 
 .menu-button:hover{
     background-color: rgb(121, 121, 121);
+    cursor: pointer;
 }
