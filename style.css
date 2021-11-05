@@ -18,7 +18,7 @@ h1 {
 }
 
 
-.firstdiv {
+.mainbox {
     display: flexbox;
     border-radius: 30px;
     background-color: rgb(212, 211, 219);
@@ -30,3 +30,10 @@ h1 {
     
 }
 
+#menu {
+    display: flexbox;
+    border-radius: 50px;
+    background-color: rgb(46, 46, 46);
+    width: 400;
+    margin: auto;
+}
