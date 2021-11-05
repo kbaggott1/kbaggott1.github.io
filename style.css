@@ -25,4 +25,6 @@ h1 {
 
 .wrapper {
     display: box;
+    width: auto;
+    height: auto;
 }
