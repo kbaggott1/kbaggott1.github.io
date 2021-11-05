@@ -33,7 +33,7 @@ h1 {
 #menu {
     display: flexbox;
     border-radius: 50px;
-    background-color: rgb(46, 46, 46);
-    width: 400;
+    background-color: rgb(80, 79, 79);
+    width: 200px;
     margin: auto;
 }
