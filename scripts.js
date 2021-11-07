@@ -16,7 +16,7 @@ function select(idSel, pageToDisplay) {
         document.getElementById(element).style.display = "none"; //Hides all content
     });
 
-    document.getElementById(pageToDisplay).style.display = "block";
+    document.getElementById(pageToDisplay).style.display = "block"; //shows selected content
     
 }
 
