@@ -6,7 +6,7 @@ body {
     min-height: 100%;
 }
 
-#wrapper {
+.wrapper {
     min-height: 100%;
 }
 
@@ -30,7 +30,7 @@ h1 {
     
 }
 
-#menu {
+.menu {
     display: flexbox;
     border-radius: 50px;
     background-color: rgb(80, 79, 79);
@@ -50,11 +50,24 @@ h1 {
     color: rgb(235, 235, 235);
 }
 
-#aboutMe {
+.aboutMe {
     background-color: rgb(121, 121, 121);
 }
 
 .menu-button:hover{
     background-color: rgb(121, 121, 121);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .mainbox{
+      width: 400px;
+  }
+
+  .menu{
+    width: 300px;
+    height: 60px;
+  }
+
 }
