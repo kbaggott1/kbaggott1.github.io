@@ -1,6 +1,6 @@
 let defaultButtonColor = "background-color: rgb(80, 79, 79);"
 let selectedButtonColor = "background-color: rgb(121, 121, 121);"
-let MenuButtons = ["mbutton1", "mbutton2", "mbutton3"]
+let MenuButtons = ["1YearP", "2YearP", "3YearP", "aboutMe"]
 function select(idSel) {
     
     MenuButtons.forEach(element => {
@@ -9,7 +9,7 @@ function select(idSel) {
 
     if (idSel == "mbutton1") {
         displayDate();
-    } 
+    } //this was just a test
     document.getElementById(idSel).style=selectedButtonColor; //sets selected button to highlighted color   
 }
 
