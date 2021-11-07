@@ -7,7 +7,7 @@ function select(idSel) {
         document.getElementById(element).style=defaultButtonColor; //sets all buttons to default color
     });
 
-    if (idSel == "mbutton1") {
+    if (idSel == "1YearP") {
         displayDate();
     } //this was just a test
     document.getElementById(idSel).style=selectedButtonColor; //sets selected button to highlighted color   
