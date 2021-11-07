@@ -62,6 +62,10 @@ h1 {
     cursor: pointer;
 }
 
+.pages {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
 
   .mainbox{
