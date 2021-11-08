@@ -44,8 +44,8 @@ p1 {
 .menu {
     display: flexbox;
     border-radius: 50px;
-    background-color: rgb(58, 56, 61);
-    width: 600px;
+    background-color: rgb(140, 136, 145);
+    width: 500px;
     height: 35px;
     margin: auto;
     text-align: center;
@@ -55,7 +55,7 @@ p1 {
     margin-left: 0px;
     margin-top: 5px;
     margin-bottom: 2px;
-    background-color: rgb(58, 56, 61);
+    background-color: rgb(140, 136, 145);
     height: 25px;
     color: rgb(235, 235, 235);
     border-style: none;
@@ -63,7 +63,7 @@ p1 {
 }
 
 .menu-button:hover{
-    background-color: rgb(86, 86, 86)!important;
+    background-color: rgb(123, 116, 131)!important;
     cursor: pointer;
 }
 
@@ -79,7 +79,7 @@ p1 {
 }
 
 .aboutMe {
-    background-color: rgb(86, 86, 86);
+    background-color: rgb(123, 116, 131);
 
 }
 
@@ -87,7 +87,7 @@ p1 {
     display: flexbox;
     width: 1100px;
     height: 600px;
-    background-color: rgb(58, 56, 61);  /*this is not permanent, this is only to see the box while im working on this section*/
+    background-color: rgb(140, 136, 145);  /*this is not permanent, this is only to see the box while im working on this section*/
     margin: auto;
     overflow-y: scroll;
 }
