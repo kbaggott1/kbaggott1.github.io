@@ -44,7 +44,7 @@ p1 {
 .menu {
     display: flexbox;
     border-radius: 50px;
-    background-color: rgb(140, 136, 145);
+    background-color: rgb(160, 155, 169);
     width: 500px;
     height: 35px;
     margin: auto;
@@ -55,7 +55,7 @@ p1 {
     margin-left: 0px;
     margin-top: 5px;
     margin-bottom: 2px;
-    background-color: rgb(140, 136, 145);
+    background-color: rgb(160, 155, 169);
     height: 25px;
     color: rgb(235, 235, 235);
     border-style: none;
