@@ -27,6 +27,7 @@ h2 {
 
 p1 {
     color: rgb(235, 235, 235);
+    text-align: left!important;
 }
 
 .mainbox {
@@ -37,7 +38,7 @@ p1 {
     margin: auto;
     width: 1200px;
     height: 800px;
-    text-align: center;  
+    text-align: left;  
     
 }
 
@@ -93,8 +94,18 @@ p1 {
     overflow-y: scroll;
 }
 
+.specificProject {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    text-align: left;
+}
 
-
+.projImage {
+    float: left;
+    margin-left: 60px;
+    margin-right: 8px;
+}
 @media only screen and (max-width: 600px) {
 
 .mainbox{
