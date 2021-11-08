@@ -88,7 +88,7 @@ p1 {
     display: flexbox;
     width: 1100px;
     height: 600px;
-    background-color: rgb(140, 136, 145);  /*this is not permanent, this is only to see the box while im working on this section*/
+    background-color: rgb(160, 155, 169);  /*this is not permanent, this is only to see the box while im working on this section*/
     margin: auto;
     overflow-y: scroll;
 }
