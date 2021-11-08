@@ -1,4 +1,4 @@
-let defaultButtonColor = "background-color: rgb(140, 136, 145);"
+let defaultButtonColor = "background-color: rgb(160, 155, 169)"
 let selectedButtonColor = "background-color: rgb(123, 116, 131);"
 let MenuButtons = ["1YearP", "2YearP", "3YearP", "aboutMe"]
 let ShowPages = ["1YearPage", "2YearPage", "3YearPage", "abMePage"]
