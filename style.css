@@ -25,6 +25,9 @@ h2 {
     color: rgb(235, 235, 235);
 }
 
+p1 {
+    color: rgb(235, 235, 235);
+}
 
 .mainbox {
     display: flexbox;
@@ -86,7 +89,7 @@ h2 {
     height: 600px;
     background-color: rgb(58, 56, 61);  /*this is not permanent, this is only to see the box while im working on this section*/
     margin: auto;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 
