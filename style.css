@@ -76,6 +76,7 @@ p1 {
 }
 .outlineList > ul {
     display: inline-block;
+    text-align: left;
 }
 
 .aboutMe {
