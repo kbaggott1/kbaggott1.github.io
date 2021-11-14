@@ -20,3 +20,12 @@ function select(idSel, pageToDisplay) {
     
 }
 
+function downloadProject(ProjectID) {
+    switch (ProjectID) {
+        case "GamesLabProj":
+            location.href="https://github.com/kbaggott1/Assignments-and-projects/raw/main/Year1/ConsoleGamesLAB3.zip";
+            break;
+    }
+    
+}
+
