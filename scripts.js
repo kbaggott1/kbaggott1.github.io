@@ -25,9 +25,12 @@ function downloadProject(ProjectID) {
         case "GamesLabProj":
             location.href="https://github.com/kbaggott1/Assignments-and-projects/raw/main/Year1/ConsoleGamesLAB3.zip";
             break;
-            case "RainfallSProject":
-                location.href="https://github.com/kbaggott1/Assignments-and-projects/raw/main/Year1/Rainfall%20Statistics%20LAB4.zip"
-                break;
+        case "RainfallSProject":
+            location.href="https://github.com/kbaggott1/Assignments-and-projects/raw/main/Year1/Rainfall%20Statistics%20LAB4.zip";
+            break;
+        case "FinalY1Project":
+            //location.href="";
+            break;
     }
     
 }
