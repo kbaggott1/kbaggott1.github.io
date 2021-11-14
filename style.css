@@ -1,6 +1,3 @@
-
-
-
 body {
     background-image: url("email-pattern.png");
     min-height: 100%;
@@ -29,6 +26,7 @@ h3 {
     margin-top: 10px;
     margin-bottom: 4px;
 }
+
 
 p1 {
     color: rgb(235, 235, 235);
@@ -113,13 +111,16 @@ hr.solid {
     height: 250px;
     margin: auto;
     margin-bottom: 50px;
-    text-align: left;
+    text-align: justify;
     display: flexbox;
     background-color: rgb(132, 126, 139);
     border-radius: 20px;
     padding-top: 2px;
-    position: relative;
-    
+    position: relative;   
+}
+
+.specificProjText {
+    margin-right: 10px;
 }
 
 .projButtons {
