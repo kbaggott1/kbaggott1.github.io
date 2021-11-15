@@ -130,10 +130,13 @@ hr.solid {
     right: 45px;
 }
 
+
+
 .projImage {
     float: left;
-    margin-left: 60px;
+    margin-left: 30px;
     margin-right: 8px;
+    border-radius: 10px;
 }
 @media only screen and (max-width: 600px) {
 
