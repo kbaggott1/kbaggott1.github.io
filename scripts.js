@@ -29,7 +29,10 @@ function downloadProject(ProjectID) {
             location.href="https://github.com/kbaggott1/Assignments-and-projects/raw/main/Year1/Rainfall%20Statistics%20LAB4.zip";
             break;
         case "FinalY1Project":
-            //location.href="";
+            location.href="https://github.com/kbaggott1/Assignments-and-projects/raw/main/Year1/GameLab5.zip";
+            break;
+        case "FinalY1Exe":
+            location.href="https://github.com/kbaggott1/kbaggott1.github.io/raw/main/Resources/Alien's%20Attack.zip";
             break;
     }
     

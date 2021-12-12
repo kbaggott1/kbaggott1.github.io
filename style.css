@@ -130,6 +130,13 @@ hr.solid {
     right: 45px;
 }
 
+.projExeButtons {
+    background-color: #a09ba9;
+    position: absolute;
+    bottom: 20px;
+    right: 200px;
+}
+
 
 
 .projImage {
