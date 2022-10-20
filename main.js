@@ -1,4 +1,4 @@
-const formContainer = document.getElementById("billInput");
+const buttonContainer = document.getElementById("buttonDiv");
 const form = document.getElementById("form");
 const removeButton = document.getElementById("removeButton");
 let billNum = 0;
@@ -25,7 +25,7 @@ function addBill() {
         removeButton.style = "visibility: visible;"
     }
 
-    formContainer.scrollIntoView({behavior: "smooth", block: "end"});
+    buttonContainer.scrollIntoView({behavior: "smooth", block: "end"});
     
 }
 
@@ -203,7 +203,7 @@ function removeBill() {
         removeButton.style = "visibility: hidden;";
     }
 
-    formContainer.scrollIntoView({behavior: "smooth", block: "end"});
+    buttonContainer.scrollIntoView({behavior: "smooth", block: "end"});
 }
 
 //#endregion
