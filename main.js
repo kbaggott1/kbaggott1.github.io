@@ -268,6 +268,7 @@ function calculateBills() {
     //#endregion
 
     //#region print to screen
+    const calculationButton = document.getElementById("calcButton");
     const resultContainer = document.getElementById("results");
     let resultDiv = document.getElementById("results");
     resultDiv.style = "visibility: visible;";
@@ -283,6 +284,8 @@ function calculateBills() {
     balanceHeader.innerText = "Balance:  " + balance.toFixed(2) + "$";
 
     resultContainer.scrollIntoView({behavior: "smooth", block: "end"});
+
+    calculationButton.innerText = "Recalculate Bills";
 
     //#endregion
 }

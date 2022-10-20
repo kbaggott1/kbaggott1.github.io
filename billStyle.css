@@ -54,7 +54,11 @@ button {
     color: white;
     border-style: solid;
     border-color: black;
-    border-radius: 5%;
+    border-radius: 5px;
+}
+
+#calcButton {
+    width: 60%;
 }
 
 button:active {
