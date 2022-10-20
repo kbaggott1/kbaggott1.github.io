@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url("bodyBack.webp");
+    background-repeat: repeat;
 }
 
 #title {
@@ -30,6 +32,7 @@ body {
     padding: 10px;
     margin-bottom: 10%;
     width: 95%;
+    background-color: whitesmoke;
 }
 
 .billDiv h2 {
@@ -74,6 +77,7 @@ button:active {
     border-radius: 2%;
     color: rgb(70, 70, 70);
     margin: 5%;
+    background-color: whitesmoke;
 }
 
 .amountLabel {
