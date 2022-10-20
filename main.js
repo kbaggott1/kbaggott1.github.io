@@ -48,11 +48,11 @@ function createFormInputs() {
     debitAmountLabel.setAttribute("class", "amountLabel");
     debitAmountLabel.innerHTML = "Debit Amount<br>";
 
-    const tipAmountLabel = document.createElement("label");
-    tipAmountLabel.setAttribute("for", "tipAmount");
-    tipAmountLabel.setAttribute("class", "amountLabel");
-    tipAmountLabel.innerHTML = "Tip Amount<br>";
-    tipAmountLabel.style = "visibility: hidden;"
+    //const tipAmountLabel = document.createElement("label");
+    //tipAmountLabel.setAttribute("for", "tipAmount");
+    //tipAmountLabel.setAttribute("class", "amountLabel");
+    //tipAmountLabel.innerHTML = "Tip Amount<br>";
+    //tipAmountLabel.style = "visibility: hidden;"
 
     const exteriorLabel = document.createElement("label");
     exteriorLabel.setAttribute("for", "exterior");
@@ -75,9 +75,12 @@ function createFormInputs() {
     const debitAmount = document.createElement("input");
     setMonitaryAttributes(debitAmount, "debitAmount");
 
-    const tipAmount = document.createElement("input");
-    setMonitaryAttributes(tipAmount, "tipAmount");
-    tipAmount.style = "visibility: hidden;"
+    const tipDiv = document.createElement("div");
+    tipDiv.style = "display: flex; flex-direction: column;";
+
+    //const tipAmount = document.createElement("input");
+    //setMonitaryAttributes(tipAmount, "tipAmount");
+    //tipAmount.style = "visibility: hidden;"
 
     const extAmount = document.createElement("input");
     extAmount.setAttribute("class", "extAmount");
@@ -119,15 +122,22 @@ function createFormInputs() {
             }             
             debitAmount.value = "0.00";
             debitAmount.disabled = true;
-            tipAmount.style = "visibility: visible;"
-            tipAmountLabel.style = "visibility: visible;"
+            //tipAmount.style = "visibility: visible;"
+            //tipAmountLabel.style = "visibility: visible;"
+            createTipField().forEach(child => {
+                tipDiv.appendChild(child);
+            });
         }
         else {
             receiptAmount.disabled = false;
             debitAmount.disabled = false;
-            tipAmount.value = "0.00";
-            tipAmount.style = "visibility: hidden;"
-            tipAmountLabel.style = "visibility: hidden;"
+            //tipAmount.value = "0.00";
+            //tipAmount.style = "visibility: hidden;"
+            //tipAmountLabel.style = "visibility: hidden;"
+
+            Array.from(tipDiv.children).forEach(child => {
+                tipDiv.removeChild(child);
+            });
         }
     });
 
@@ -151,7 +161,7 @@ function createFormInputs() {
         billTitle, 
         receiptAmountLabel, receiptAmount, document.createElement("br"), //Receipt ammount
         debitAmountLabel, debitAmount, document.createElement("br"), //Debit
-        tipAmountLabel, tipAmount, document.createElement("br"), //tip
+        tipDiv, document.createElement("br"), //tip
         checkBoxdDiv,//exterior, exteriorLabel, //exterior checkbox
         //uber, uberLabel, //uber checkbox
         extAmount
@@ -159,6 +169,18 @@ function createFormInputs() {
 
     return bill;
 } //maybe make function for each new input element (pair label with input as child)
+
+function createTipField() {
+    const tipAmountLabel = document.createElement("label");
+    tipAmountLabel.setAttribute("for", "tipAmount");
+    tipAmountLabel.setAttribute("class", "amountLabel");
+    tipAmountLabel.innerHTML = "Tip Amount<br>";
+
+    const tipAmount = document.createElement("input");
+    setMonitaryAttributes(tipAmount, "tipAmount");
+
+    return [tipAmountLabel, tipAmount];
+}
 
 function changeExterior(exterior, extAmount, receiptAmount) {
     const TVQ = 0.09975; //9.975%
