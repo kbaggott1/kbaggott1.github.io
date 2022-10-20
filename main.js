@@ -170,6 +170,7 @@ function setMonitaryAttributes(inputElement, name) {
     inputElement.setAttribute("step", "0.01");
     inputElement.setAttribute("value", "0.00");
     inputElement.setAttribute("min", "0");
+    inputElement.setAttribute("onclick", "this.select()");
 }
 
 //#endregion
