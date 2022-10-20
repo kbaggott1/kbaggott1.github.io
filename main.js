@@ -258,6 +258,9 @@ function calculateBills() {
 
     extElements.forEach(exterior => {
         if(parseFloat(exterior.value) > 0) {
+            if(exterior.value > 10) {
+                exterior.value = 10;
+            }              
             addToList(exteriors, parseFloat(exterior.value));
             totalExterior += parseFloat(exterior.value); 
         }
