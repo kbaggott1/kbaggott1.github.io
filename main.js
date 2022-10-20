@@ -48,11 +48,6 @@ function createFormInputs() {
     debitAmountLabel.setAttribute("class", "amountLabel");
     debitAmountLabel.innerHTML = "Debit Amount<br>";
 
-    //const tipAmountLabel = document.createElement("label");
-    //tipAmountLabel.setAttribute("for", "tipAmount");
-    //tipAmountLabel.setAttribute("class", "amountLabel");
-    //tipAmountLabel.innerHTML = "Tip Amount<br>";
-    //tipAmountLabel.style = "visibility: hidden;"
 
     const exteriorLabel = document.createElement("label");
     exteriorLabel.setAttribute("for", "exterior");
@@ -78,9 +73,6 @@ function createFormInputs() {
     const tipDiv = document.createElement("div");
     tipDiv.style = "display: flex; flex-direction: column;";
 
-    //const tipAmount = document.createElement("input");
-    //setMonitaryAttributes(tipAmount, "tipAmount");
-    //tipAmount.style = "visibility: hidden;"
 
     const extAmount = document.createElement("input");
     extAmount.setAttribute("class", "extAmount");
@@ -95,11 +87,9 @@ function createFormInputs() {
     exterior.addEventListener("input", () => {
         if(exterior.checked) {
             receiptAmount.disabled = false;
-            receiptAmount.dataset.countthis = "false"; 
             changeExterior(exterior, extAmount, receiptAmount);
         }
-        else {
-            receiptAmount.dataset.countthis = "true";  
+        else { 
             extAmount.value = 0;
             if(uber.checked){
                 receiptAmount.disabled = true;
@@ -114,6 +104,7 @@ function createFormInputs() {
 
     uber.addEventListener("change", () => {
         if(uber.checked) {
+            receiptAmount.dataset.countthis = "false"; 
             if(exterior.checked) {
                 receiptAmount.disabled = false;
             }             
@@ -122,18 +113,15 @@ function createFormInputs() {
             }             
             debitAmount.value = "0.00";
             debitAmount.disabled = true;
-            //tipAmount.style = "visibility: visible;"
-            //tipAmountLabel.style = "visibility: visible;"
+
             createTipField().forEach(child => {
                 tipDiv.appendChild(child);
             });
         }
         else {
+            receiptAmount.dataset.countthis = "true";  
             receiptAmount.disabled = false;
             debitAmount.disabled = false;
-            //tipAmount.value = "0.00";
-            //tipAmount.style = "visibility: hidden;"
-            //tipAmountLabel.style = "visibility: hidden;"
 
             Array.from(tipDiv.children).forEach(child => {
                 tipDiv.removeChild(child);
