@@ -93,6 +93,7 @@ function createFormInputs() {
         }
         else {
             receiptAmount.dataset.countthis = "true";  
+            extAmount.value = 0;
             if(uber.checked){
                 receiptAmount.disabled = true;
             }
@@ -159,8 +160,10 @@ function changeExterior(exterior, extAmount, receiptAmount) {
     if(exterior.checked) {
         extAmount.value = round((parseFloat(receiptAmount.value) * TVQ), 2);
     }
-    else
-    extAmount.value = 0;
+    else {
+        extAmount.value = 0;
+    }
+
 }
 
 function setMonitaryAttributes(inputElement, name) {
