@@ -1,3 +1,4 @@
+const formContainer = document.getElementById("billInput");
 const form = document.getElementById("form");
 const removeButton = document.getElementById("removeButton");
 let billNum = 0;
@@ -23,6 +24,9 @@ function addBill() {
     if(billNum > 1) {
         removeButton.style = "visibility: visible;"
     }
+
+    formContainer.scrollIntoView({behavior: "smooth", block: "end"});
+    
 }
 
 
@@ -121,6 +125,7 @@ function createFormInputs() {
         else {
             receiptAmount.disabled = false;
             debitAmount.disabled = false;
+            tipAmount.value = "0.00";
             tipAmount.style = "visibility: hidden;"
             tipAmountLabel.style = "visibility: hidden;"
         }
@@ -181,11 +186,14 @@ function setMonitaryAttributes(inputElement, name) {
 //#region Remove Bills
 
 function removeBill() {
-    const MIN_BILLS = 1
+    const MIN_BILLS = 1;
+
     form.removeChild(document.getElementById(--billNum));
     if(billNum === MIN_BILLS) {
-        removeButton.style = "visibility: hidden;"
+        removeButton.style = "visibility: hidden;";
     }
+
+    formContainer.scrollIntoView({behavior: "smooth", block: "end"});
 }
 
 //#endregion
@@ -250,16 +258,21 @@ function calculateBills() {
     //#endregion
 
     //#region print to screen
+    const resultContainer = document.getElementById("results");
     let resultDiv = document.getElementById("results");
     resultDiv.style = "visibility: visible;";
 
     let receiptHeader = document.getElementById("totalReceiptAmount");
     let debitHeader = document.getElementById("totalDebitAmount");
     let balanceHeader = document.getElementById("balance");
+    let tipAndExtHeader = document.getElementById("tipAndExt");
 
     receiptHeader.innerText = "Total Receipt Amount: " + totalReceiptAmount.toFixed(2) + "$";
     debitHeader.innerText = "Total Debit Amount: " + totalDebitAmount.toFixed(2) + "$";
+    tipAndExtHeader.innerText = "Total Tip & Exteriors: " + (totalExterior + totalTip).toFixed(2) + "$";
     balanceHeader.innerText = "Balance:  " + balance.toFixed(2) + "$";
+
+    resultContainer.scrollIntoView({behavior: "smooth", block: "end"});
 
     //#endregion
 }
