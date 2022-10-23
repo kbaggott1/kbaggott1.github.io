@@ -346,7 +346,7 @@ function calculateBills() {
     });
 
     extElements.forEach(exterior => {
-        const exteriorMoney = parseFloat(exterior.value.split(" - ")[1]);
+        let exteriorMoney = parseFloat(exterior.value.split(" - ")[1]);
 
         if(exteriorMoney > 0) {
             if(exteriorMoney > 10) {
