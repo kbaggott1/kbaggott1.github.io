@@ -66,6 +66,8 @@ function createFormInputs() {
     const receiptAmount = document.createElement("input");
     setMonitaryAttributes(receiptAmount, "receiptAmount");
     receiptAmount.setAttribute("data-countthis", "true");
+    receiptAmount.setAttribute("data-billnum", "0");
+    
 
     const debitAmount = document.createElement("input");
     setMonitaryAttributes(debitAmount, "debitAmount");
@@ -73,11 +75,19 @@ function createFormInputs() {
     const tipDiv = document.createElement("div");
     tipDiv.style = "display: flex; flex-direction: column;";
 
+    
+    const billDiv = document.createElement("div");
+    billDiv.style = "display: flex; flex-direction: column;";
 
     const extAmount = document.createElement("input");
     extAmount.setAttribute("class", "extAmount");
     extAmount.setAttribute("type", "hidden");
     extAmount.setAttribute("value", "0");
+
+    const hiddenTipAmount = document.createElement("input");
+    hiddenTipAmount.setAttribute("class", "hiddenTipAmount");
+    hiddenTipAmount.setAttribute("type", "hidden");
+    hiddenTipAmount.setAttribute("value", "0");
 
     const exterior = document.createElement("input");
     exterior.setAttribute("type", "checkbox");
@@ -87,12 +97,31 @@ function createFormInputs() {
     exterior.addEventListener("input", () => {
         if(exterior.checked) {
             receiptAmount.disabled = false;
-            changeExterior(exterior, extAmount, receiptAmount);
+            setExterior(exterior, extAmount, receiptAmount);
+
+            if(receiptAmount.dataset.billnum === "0") {
+                createBillNumField().forEach(child => {
+                    billDiv.appendChild(child);
+                });
+
+                billDiv.lastChild.addEventListener("input", () => {
+                    receiptAmount.dataset.billnum = billDiv.lastChild.value;
+                    setExterior(exterior, extAmount, receiptAmount);
+                });
+
+                receiptAmount.dataset.billnum = "N/A";
+            }
         }
         else { 
             extAmount.value = 0;
             if(uber.checked){
                 receiptAmount.disabled = true;
+            }
+            else {
+                Array.from(billDiv.children).forEach(child => {
+                    billDiv.removeChild(child);
+                });
+                receiptAmount.dataset.billnum = "0";
             }
         }
     });
@@ -117,21 +146,56 @@ function createFormInputs() {
             createTipField().forEach(child => {
                 tipDiv.appendChild(child);
             });
+
+            tipDiv.lastChild.addEventListener("input", () => {
+                hiddenTipAmount.value = receiptAmount.dataset.billnum + " - " + tipDiv.lastChild.value;
+            });
+
+            if(receiptAmount.dataset.billnum === "0") {
+                createBillNumField().forEach(child => {
+                    billDiv.appendChild(child);
+                });
+
+                billDiv.lastChild.addEventListener("input", () => {
+                    receiptAmount.dataset.billnum = billDiv.lastChild.value;
+
+                    hiddenTipAmount.value = receiptAmount.dataset.billnum + " - " + tipDiv.lastChild.value;
+
+                    if (exterior.checked) 
+                        setExterior(exterior, extAmount, receiptAmount);
+                });
+
+                receiptAmount.dataset.billnum = "N/A";
+            }
+
+
+
         }
         else {
             receiptAmount.dataset.countthis = "true";  
             receiptAmount.disabled = false;
             debitAmount.disabled = false;
+            hiddenTipAmount.value = "0";
 
             Array.from(tipDiv.children).forEach(child => {
                 tipDiv.removeChild(child);
             });
+
+            if(!exterior.checked) {
+                Array.from(billDiv.children).forEach(child => {
+                    billDiv.removeChild(child);
+                });
+                receiptAmount.dataset.billnum = "0";
+            }
         }
     });
 
+    
+
     receiptAmount.addEventListener("input", () => {
-        changeExterior(exterior, extAmount, receiptAmount)
+        setExterior(exterior, extAmount, receiptAmount);
     });
+
 
     //#endregion
 
@@ -149,10 +213,11 @@ function createFormInputs() {
         billTitle, 
         receiptAmountLabel, receiptAmount, document.createElement("br"), //Receipt ammount
         debitAmountLabel, debitAmount, document.createElement("br"), //Debit
-        tipDiv, document.createElement("br"), //tip
+        billDiv, document.createElement("br"), //bill numbers
+        tipDiv, document.createElement("br"), //tip 
         checkBoxdDiv,//exterior, exteriorLabel, //exterior checkbox
         //uber, uberLabel, //uber checkbox
-        extAmount
+        extAmount, hiddenTipAmount
     ];
 
     return bill;
@@ -170,10 +235,32 @@ function createTipField() {
     return [tipAmountLabel, tipAmount];
 }
 
-function changeExterior(exterior, extAmount, receiptAmount) {
+function createBillNumField() {
+    const billNumLabel = document.createElement("label");
+    billNumLabel.setAttribute("class", "amountLabel");
+    billNumLabel.innerHTML = "Bill Number<br>";
+
+    
+
+    const billNumber = document.createElement("input");
+    billNumber.setAttribute("class", "amountLabel");
+    billNumber.setAttribute("type", "number");
+    billNumber.setAttribute("step", "1");
+    billNumber.setAttribute("value", "0");
+    billNumber.setAttribute("min", "0");
+    billNumber.setAttribute("onclick", "this.select()");
+
+    return[billNumLabel, billNumber];
+
+
+}
+
+function setExterior(exterior, extAmount, receiptAmount) {
+    const totalTax = 1.14975; //Need to remove tax before adding getting TVQ
     const TVQ = 0.09975; //9.975%
     if(exterior.checked) {
-        extAmount.value = round((parseFloat(receiptAmount.value) * TVQ), 2);
+        extAmount.value = round(((parseFloat(receiptAmount.value) / totalTax) * TVQ), 2);
+        extAmount.value = receiptAmount.dataset.billnum + " - " + extAmount.value;
     }
     else {
         extAmount.value = 0;
@@ -230,7 +317,7 @@ function calculateBills() {
     //#region Calculation
     let receiptElements = document.querySelectorAll(".receiptAmount");
     let debitElements = document.querySelectorAll(".debitAmount");
-    let tipElements = document.querySelectorAll(".tipAmount");
+    let tipElements = document.querySelectorAll(".hiddenTipAmount");
     let extElements = document.querySelectorAll(".extAmount");
 
     let totalReceiptAmount = 0;
@@ -250,19 +337,24 @@ function calculateBills() {
     });
 
     tipElements.forEach(tip => {
-        if(parseFloat(tip.value) > 0) {
-            addToList(tips, parseFloat(tip.value));
-            totalTip += parseFloat(tip.value);
+        const tipMoney = parseFloat(tip.value.split(" - ")[1])
+
+        if(tipMoney > 0) {
+            addToList(tips, tip.value);
+            totalTip += tipMoney;
         }
     });
 
     extElements.forEach(exterior => {
-        if(parseFloat(exterior.value) > 0) {
-            if(exterior.value > 10) {
-                exterior.value = 10;
+        const exteriorMoney = parseFloat(exterior.value.split(" - ")[1]);
+
+        if(exteriorMoney > 0) {
+            if(exteriorMoney > 10) {
+                exteriorMoney = 10;
+                exterior.value = (exterior.value.split(" - ")[0]) + " - 10";
             }              
-            addToList(exteriors, parseFloat(exterior.value));
-            totalExterior += parseFloat(exterior.value); 
+            addToList(exteriors, exterior.value);
+            totalExterior += exteriorMoney; 
         }
     });
 
@@ -295,7 +387,7 @@ function calculateBills() {
 
 function addToList(parent, value) {
     let newElement = document.createElement("li");
-    newElement.innerText = value.toFixed(2) + "$"
+    newElement.innerText = value + "$";
 
     parent.appendChild(newElement);
 }
