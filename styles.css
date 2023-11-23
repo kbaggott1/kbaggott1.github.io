@@ -12,7 +12,8 @@ body, h1, h2, p, ul, li, a {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #ececec; /* Light gray background */
+    background-color: linear-gradient(to right, #4a90e2, #635ab9);
+    /* background-color: #ececec; /* Light gray background */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
