@@ -8,159 +8,160 @@
     <script src="../script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Kevin Baggott</h1>
-        <p>Junior Software Developer</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="../index.html">About</a></li>
-            <li><a href="./projects.html"><b>Projects</b></a></li>
-            <li><a href="./contact.html">Social</a></li>
-        </ul>
-    </nav>
+    <div class="main-body">
+        <header>
+            <h1>Kevin Baggott</h1>
+            <p>Junior Software Developer</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="./projects.html"><b>Projects</b></a></li>
+                <li><a href="./contact.html">Social</a></li>
+            </ul>
+        </nav>
 
-    <div class="main-content">
-        <!-- PROJECTS -->
-        <section id="projects" class="page">
-            <h2 class="section-header", style="display: block;">Projects</h2>
-            <hr>
-            <div class="project">
-                <div class="project-title-div">
-                    <h3>Messaging App</h3>
-                    <div class="tech-icon-div">
-                        <img src="../assets/technologies/react.svg" alt="react icon" class="tech-icon" width="100px">
-                        <img src="../assets/technologies/nodejs.svg" alt="nodejs icon" class="tech-icon" width="100px"> 
-                        <img src="../assets/technologies/express.svg" alt="express icon" class="tech-icon" width="150px">
-                        <img src="../assets/technologies/mongodb.svg" alt="mongodb icon" class="tech-icon" width="200px">
-                    </div>
-                </div>
-                
-                <p>
-                    The goal of this project was to create a messaging app. For the backend, it was built using the Express.js framework and that connected to
-                    a MongoDB database. For the frontend React.js was used. When hooked up to a Mongo database, you can create an account, then you can start
-                    chats with others by entering their username in the chat page and start messaging away! 
-                </p>
+        <div class="main-content">
+            <!-- PROJECTS -->
+            <section id="projects" class="page">
+                <h2 class="section-header", style="display: block;">Projects</h2>
                 <hr>
-                <div>
-                    <button onclick="openLink('https://github.com/kbaggott1/MessageApp')">View Git Repository</button>
-                    <button id="message-app-button" onclick="toggleImages('message-app-button', 'message-app-image-div')" class="hide-mobile">Show Screenshots</button>
-                </div>
-                <div class="images" id="message-app-image-div">
-                    <img src="../assets/messageappchat.png" alt="screenshot"> 
-                    <img src="../assets/MessageAppPlaceholder.png">
-                </div>
-                
-
-            </div>
-
-            <div class="project">
-                <div class="project-title-div">
-                    <h3>Vending Machine</h3>
-                    <div class="tech-icon-div">
-                        <img src="../assets/technologies/c-sharp.svg" alt="c-sharp icon" class="tech-icon" width="100px">
-                        <img src="../assets/technologies/wpf-icon.png" alt="wpf icon" class="tech-icon" width="100px"> 
-                    </div>
-
-                </div>
-                <p>This project is a WPF application, it mimics a vending machine by have a keypad, screen for the keypad, a display with all the items 
-                    you can purchase, and the ability to pay with "debit" or "cash". These items are stored using a csv file, which contains the name of the product
-                    as well and the amount in stock. There is also an option to save the current stock to the csv if for instance you purchased
-                    items and want to save the current amount of items in stock for the next time you run the application.
-                </p>
-                <hr>
-                <div>
-                    <button onclick="openLink('https://github.com/Cristiano-Fazi/Vending-Machine-App')">View Git Repository</button>
-                    <button id="vending-machine-button" onclick="toggleImages('vending-machine-button', 'vending-machine-image-div')" class="hide-mobile">Show Screenshots</button>
-                </div>
-                <div class="images" id="vending-machine-image-div">
-                    <img src="../assets/vendingmachine.png" alt="screenshot of keypad and items in vending machine" width="500px">
-                    <img src="../assets/vending2.png" alt="vending machine cart and cash window screenshots">
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-title-div">
-                    <h3>Aliens Attack</h3>
-                    <div class="tech-icon-div">
-                       <img src="../assets/technologies/c-sharp.svg" alt="c-sharp icon" class="tech-icon" width="100px"> 
+                <div class="project">
+                    <div class="project-title-div">
+                        <h3>Messaging App</h3>
+                        <div class="tech-icon-div">
+                            <img src="../assets/technologies/react.svg" alt="react icon" class="tech-icon" width="100px">
+                            <img src="../assets/technologies/nodejs.svg" alt="nodejs icon" class="tech-icon" width="100px"> 
+                            <img src="../assets/technologies/express.svg" alt="express icon" class="tech-icon" width="150px">
+                            <img src="../assets/technologies/mongodb.svg" alt="mongodb icon" class="tech-icon" width="200px">
+                        </div>
                     </div>
                     
-                </div>
-                <p>Aliens Attack is a video game made in C#. It was my first time ever learning/using object oriented programming in 2021. It is a game inspired 
-                    off of space invaders where you control a space ship and have to fight off alien space ships to progress furthur into different levels
-                    with a boss fight at the end. Game progress is saved using an xml file and the highscore for each level is saved in the same file as well.
-                </p>
-                <hr>
-                <div>
-                    <button onclick="openLink('https://github.com/kbaggott1/AliensAttack')">View Git Repository</button>
-                    <button id="aliens-attack-button" onclick="toggleImages('aliens-attack-button', 'aliens-attack-image-div')" class="hide-mobile">Show Screenshots</button>
-                </div>
-                <div class="images" id="aliens-attack-image-div">
-                    <img src="https://user-images.githubusercontent.com/93663166/284986509-c925bda2-2b4e-42d1-b575-dee6d334de14.png" alt="Main menu screenshot of Aliens Attack">
-                    <img src="https://user-images.githubusercontent.com/93663166/284986664-5d06734c-a254-409d-af69-5a36d485e8ab.png" alt="Game play screenshot of Aliens Attack">
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-title-div">
-                    <h3>FitFolio (WIP)</h3>
-                    <div class="tech-icon-div">
-                        <img src="../assets/technologies/kotlin.svg" alt="kotlin icon" class="tech-icon" width="200px">
-                        <img src="../assets/technologies/jetpackcomposeicon.png" alt="jetpack compose icon" class="tech-icon" width="100px">
-                        <img src="../assets/technologies/firebase.svg" alt="firebase icon" class="tech-icon" width="60px">
+                    <p>
+                        The goal of this project was to create a messaging app. For the backend, it was built using the Express.js framework and that connected to
+                        a MongoDB database. For the frontend React.js was used. When hooked up to a Mongo database, you can create an account, then you can start
+                        chats with others by entering their username in the chat page and start messaging away! 
+                    </p>
+                    <hr>
+                    <div>
+                        <button onclick="openLink('https://github.com/kbaggott1/MessageApp')">View Git Repository</button>
+                        <button id="message-app-button" onclick="toggleImages('message-app-button', 'message-app-image-div')" class="hide-mobile">Show Screenshots</button>
                     </div>
-
-                </div>
-                <p>
-                    FitFolio is a mobile application project built with the Jetpack Compose framework. It's purpose is to help plan workout routines and keep track
-                    of previous workouts. My team and I are also using this project as a way to practice our DevOps using GitHub's built in projects and issue
-                    tracker. This is still a work in progress but is expected to be finished by the end of 2023.
-                </p>
-                <hr>
-                <div>
-                    <button onclick="openLink('https://github.com/kbaggott1/FitFolio')">View Git Repository</button>
-                    <button id="fitfolio-button" onclick="toggleImages('fitfolio-button', 'fitfolio-image-div')" class="hide-mobile">Show Screenshots</button>
-                </div>
-                <div class="images" id="fitfolio-image-div">
-                    <img src="https://user-images.githubusercontent.com/93663166/276438471-a1ab6a50-6710-4ba9-ac64-80046a2dd1a3.png" alt="Routines overview in FitFolio app" width="15%">
-                    <img src="https://user-images.githubusercontent.com/93663166/276438447-46d58a83-2b44-4412-bb1c-0584e9957b7f.png" alt="Routine viewer of a leg day routine in FitFolio app" width="15%">
-                    <img src="https://user-images.githubusercontent.com/98350514/276454237-00d9f8a0-fe41-4db2-868f-0889415bd302.png" alt="Statistics page showing stats of workouts" width="15%">
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-title-div">
-                    <h3>Bravo Bills</h3>
-                    <div class="tech-icon-div">
-                        <img src="../assets/technologies/html-5.svg" alt="html5 icon" class="tech-icon" width="100px">
-                        <img src="../assets/technologies/css-3.svg" alt="css icon" class="tech-icon" width="100px">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg" alt="javascript icon" class="tech-icon" width="100px">
+                    <div class="images" id="message-app-image-div">
+                        <img src="../assets/messageappchat.png" alt="screenshot"> 
+                        <img src="../assets/MessageAppPlaceholder.png">
                     </div>
+                    
 
                 </div>
-                <p>This is a web application I designed to help me calculate how much I owe the pizzeria Bravo at the end of the night after delivering pizza. 
-                    This application was designed for mobile use so it might not look the best running in a desktop environment. 
-                </p>
-                <hr>
-                <div id="bravo-button-div">
-                    <button onclick="openLink('https://github.com/kbaggott1/BravoBills')">View Git Repository</button>
-                    <button id="bravo-bills-button" onclick="toggleImages('bravo-bills-button', 'bravo-bills-image-div')" class="hide-mobile">Show Screenshots</button>
-                    <button onclick="openLink('./bravo/bills.html')">Take me to the site</button>
-                </div>
-                <div class="images" id="bravo-bills-image-div">
-                    <img src="https://user-images.githubusercontent.com/93663166/284987715-526bc900-da0b-431d-98e9-769d9c28b5e6.png" alt="User input section of the bills application">
-                    <img src="https://user-images.githubusercontent.com/93663166/284987972-2c3a9cd7-ed1b-4afa-a79a-04a95cfefb91.png" alt="Calculated section of the bills application">
-                </div>
-            </div>
 
-        </section>
+                <div class="project">
+                    <div class="project-title-div">
+                        <h3>Vending Machine</h3>
+                        <div class="tech-icon-div">
+                            <img src="../assets/technologies/c-sharp.svg" alt="c-sharp icon" class="tech-icon" width="100px">
+                            <img src="../assets/technologies/wpf-icon.png" alt="wpf icon" class="tech-icon" width="100px"> 
+                        </div>
+
+                    </div>
+                    <p>This project is a WPF application, it mimics a vending machine by have a keypad, screen for the keypad, a display with all the items 
+                        you can purchase, and the ability to pay with "debit" or "cash". These items are stored using a csv file, which contains the name of the product
+                        as well and the amount in stock. There is also an option to save the current stock to the csv if for instance you purchased
+                        items and want to save the current amount of items in stock for the next time you run the application.
+                    </p>
+                    <hr>
+                    <div>
+                        <button onclick="openLink('https://github.com/Cristiano-Fazi/Vending-Machine-App')">View Git Repository</button>
+                        <button id="vending-machine-button" onclick="toggleImages('vending-machine-button', 'vending-machine-image-div')" class="hide-mobile">Show Screenshots</button>
+                    </div>
+                    <div class="images" id="vending-machine-image-div">
+                        <img src="../assets/vendingmachine.png" alt="screenshot of keypad and items in vending machine" width="500px">
+                        <img src="../assets/vending2.png" alt="vending machine cart and cash window screenshots">
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title-div">
+                        <h3>Aliens Attack</h3>
+                        <div class="tech-icon-div">
+                        <img src="../assets/technologies/c-sharp.svg" alt="c-sharp icon" class="tech-icon" width="100px"> 
+                        </div>
+                        
+                    </div>
+                    <p>Aliens Attack is a video game made in C#. It was my first time ever learning/using object oriented programming in 2021. It is a game inspired 
+                        off of space invaders where you control a space ship and have to fight off alien space ships to progress furthur into different levels
+                        with a boss fight at the end. Game progress is saved using an xml file and the highscore for each level is saved in the same file as well.
+                    </p>
+                    <hr>
+                    <div>
+                        <button onclick="openLink('https://github.com/kbaggott1/AliensAttack')">View Git Repository</button>
+                        <button id="aliens-attack-button" onclick="toggleImages('aliens-attack-button', 'aliens-attack-image-div')" class="hide-mobile">Show Screenshots</button>
+                    </div>
+                    <div class="images" id="aliens-attack-image-div">
+                        <img src="https://user-images.githubusercontent.com/93663166/284986509-c925bda2-2b4e-42d1-b575-dee6d334de14.png" alt="Main menu screenshot of Aliens Attack">
+                        <img src="https://user-images.githubusercontent.com/93663166/284986664-5d06734c-a254-409d-af69-5a36d485e8ab.png" alt="Game play screenshot of Aliens Attack">
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title-div">
+                        <h3>FitFolio (WIP)</h3>
+                        <div class="tech-icon-div">
+                            <img src="../assets/technologies/kotlin.svg" alt="kotlin icon" class="tech-icon" width="200px">
+                            <img src="../assets/technologies/jetpackcomposeicon.png" alt="jetpack compose icon" class="tech-icon" width="100px">
+                            <img src="../assets/technologies/firebase.svg" alt="firebase icon" class="tech-icon" width="60px">
+                        </div>
+
+                    </div>
+                    <p>
+                        FitFolio is a mobile application project built with the Jetpack Compose framework. It's purpose is to help plan workout routines and keep track
+                        of previous workouts. My team and I are also using this project as a way to practice our DevOps using GitHub's built in projects and issue
+                        tracker. This is still a work in progress but is expected to be finished by the end of 2023.
+                    </p>
+                    <hr>
+                    <div>
+                        <button onclick="openLink('https://github.com/kbaggott1/FitFolio')">View Git Repository</button>
+                        <button id="fitfolio-button" onclick="toggleImages('fitfolio-button', 'fitfolio-image-div')" class="hide-mobile">Show Screenshots</button>
+                    </div>
+                    <div class="images" id="fitfolio-image-div">
+                        <img src="https://user-images.githubusercontent.com/93663166/276438471-a1ab6a50-6710-4ba9-ac64-80046a2dd1a3.png" alt="Routines overview in FitFolio app" width="15%">
+                        <img src="https://user-images.githubusercontent.com/93663166/276438447-46d58a83-2b44-4412-bb1c-0584e9957b7f.png" alt="Routine viewer of a leg day routine in FitFolio app" width="15%">
+                        <img src="https://user-images.githubusercontent.com/98350514/276454237-00d9f8a0-fe41-4db2-868f-0889415bd302.png" alt="Statistics page showing stats of workouts" width="15%">
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title-div">
+                        <h3>Bravo Bills</h3>
+                        <div class="tech-icon-div">
+                            <img src="../assets/technologies/html-5.svg" alt="html5 icon" class="tech-icon" width="100px">
+                            <img src="../assets/technologies/css-3.svg" alt="css icon" class="tech-icon" width="100px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg" alt="javascript icon" class="tech-icon" width="100px">
+                        </div>
+
+                    </div>
+                    <p>This is a web application I designed to help me calculate how much I owe the pizzeria Bravo at the end of the night after delivering pizza. 
+                        This application was designed for mobile use so it might not look the best running in a desktop environment. 
+                    </p>
+                    <hr>
+                    <div id="bravo-button-div">
+                        <button onclick="openLink('https://github.com/kbaggott1/BravoBills')">View Git Repository</button>
+                        <button id="bravo-bills-button" onclick="toggleImages('bravo-bills-button', 'bravo-bills-image-div')" class="hide-mobile">Show Screenshots</button>
+                        <button onclick="openLink('./bravo/bills.html')">Take me to the site</button>
+                    </div>
+                    <div class="images" id="bravo-bills-image-div">
+                        <img src="https://user-images.githubusercontent.com/93663166/284987715-526bc900-da0b-431d-98e9-769d9c28b5e6.png" alt="User input section of the bills application">
+                        <img src="https://user-images.githubusercontent.com/93663166/284987972-2c3a9cd7-ed1b-4afa-a79a-04a95cfefb91.png" alt="Calculated section of the bills application">
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <footer>
+            <p>&copy; 2023 Kevin Baggott</p>
+            <p id="mobile-disclaimer"><em>*Some features are disabled on mobile devices</em></p>
+        </footer>
+
     </div>
-    <footer>
-        <p>&copy; 2023 Kevin Baggott</p>
-        <p id="mobile-disclaimer"><em>*Some features are disabled on mobile devices</em></p>
-    </footer>
-
-
 </body>
 </html>

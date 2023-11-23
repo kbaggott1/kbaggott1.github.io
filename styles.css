@@ -10,9 +10,13 @@ body, h1, h2, p, ul, li, a {
     padding: 0;
 }
 
+.main-body {
+    background-color: #ececec;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: linear-gradient(to right, #4a90e2, #635ab9);
+    background: linear-gradient(to right, #4a90e2, #635ab9);
     /* background-color: #ececec; /* Light gray background */
     display: flex;
     flex-direction: column;
