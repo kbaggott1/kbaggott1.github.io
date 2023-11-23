@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="main.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="billStyle.css">
+    </head>
+
+    <body>      
+        <div id="title">
+            <h1>Enter Bills</h1>
+        </div>
+        
+        <div id="billInput">
+
+            <form id="form"></form>
+            <div id="buttonDiv">
+                <Button onclick="addBill()">Add Bill</Button> 
+                <Button id="removeButton" style="visibility: hidden;" onclick="removeBill()">Remove Bill</Button> <br>
+            </div>
+            <Button id="calcButton" onclick="calculateBills()">Calculate Bills</Button>
+        </div>
+        <div id="results" style="visibility: hidden;">
+            <h1>Finalized Result</h1>
+            <h2 id="totalReceiptAmount"></h3>
+            <h2 id="totalDebitAmount"></h3>
+            <div>
+                <h3>Exteriors:</h3>
+                <ul id="exteriors"></ul>
+            </div>
+            <div>
+                <h3>Tips:</h3>
+                <ul id="tips"></ul>
+            </div>
+            <h3 id="tipAndExt"></h3>
+            <h2 id="balance"></h2>  
+
+        </div>
+        
+        
+    </body>
+</html>

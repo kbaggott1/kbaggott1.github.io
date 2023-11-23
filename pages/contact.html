@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Baggott</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kevin Baggott</h1>
+        <p>Junior Software Developer</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./contact.html"><b>Social</b></a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <section id="contact" class="page">
+            <h2 class="section-header">Social</h2>
+            <hr>
+            <div class="contact-card-container">
+                <section class="contact-card" onclick="openLink('https://github.com/kbaggott1')">
+                    <img src="../assets/git-logo.png" alt="GitHub logo" width="32px" height="32px">
+                    <!--https://www.flaticon.com/free-icon/github-logo_25231-->
+                    <h3>GitHub</h3>
+                </section>
+                <section class="contact-card" onclick="openLink('https://www.linkedin.com/in/kevin-baggott-2135a4241')">
+                    <img src="../assets/linkedin-logo.png" alt="LinkedIn logo" width="32px" height="32px">
+                    <!--https://iconduck.com/icons/1883/linkedin-->
+                    <h3>LinkedIn</h3>
+                </section>
+                <section class="contact-card" onclick="openLink('mailto:kevin.baggott1@gmail.com?subject=Portfolio%20-%20Contact')">
+                    <img src="../assets/email-logo.png" alt="github logo" width="32px" height="32px">
+                    <!--https://www.freeiconspng.com/images/email-icon-->
+                    <h3 id="email">kevin.baggott1@gmail.com</h3>
+                </section>
+
+            </div>
+        </section>
+        <section class="page">
+            <h2 class="section-header">CV</h2>
+            <hr>
+            <div class="cv-container">
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vRxAGIynOrJzj9c7CQggbpTOtWy2p3eDsm7U8qo1HozWswc_QMTfipiiXFX67EUOwqr41SF_G7FPGdd/pub?embedded=true"></iframe>
+                <a href="../downloadables/Resume-EnFr.pdf" download="Resume.pdf"><button>Download PDF</button></a>
+            </div>
+            
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Kevin Baggott</p>
+    </footer>
+
+
+</body>
+</html>

@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script src="main.js" defer></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="billStyle.css">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Baggott</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kevin Baggott</h1>
+        <p>Junior Software Developer</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./about.html"><b>About</b></a></li>
+            <li><a href="./pages/projects.html">Projects</a></li>
+            <li><a href="./pages/contact.html">Social</a></li>
+        </ul>
+    </nav>
 
-    <body>      
-        <div id="title">
-            <h1>Enter Bills</h1>
-        </div>
-        
-        <div id="billInput">
+    <div class="main-content">
+        <section id="about" class="page">
+            <h2 class="section-header">About Me</h2>
+            <hr>
+            <div class="about-me-container">
+                <div>
+                    <p>
+                        Hello! I'm Kevin Baggott, a passionate computer science enthusiast who enjoys programming and solving problems. 
+                        From a young age, I've always been fascinated by the world of computers. Because of that, I've dedicated my academic and professional 
+                        journey to this field of work.
+                    </p>
+                    <p>
+                         When I'm not coding, you can find me riding my motorcycle, going to the gym, snowboarding or just hanging out with my friends and family.
+                    </p>
+                </div>
 
-            <form id="form"></form>
-            <div id="buttonDiv">
-                <Button onclick="addBill()">Add Bill</Button> 
-                <Button id="removeButton" style="visibility: hidden;" onclick="removeBill()">Remove Bill</Button> <br>
+                <img src="./assets//timesquare.jpg" alt="Picture of me on an advertisement in timesquare.">
             </div>
-            <Button id="calcButton" onclick="calculateBills()">Calculate Bills</Button>
-        </div>
-        <div id="results" style="visibility: hidden;">
-            <h1>Finalized Result</h1>
-            <h2 id="totalReceiptAmount"></h3>
-            <h2 id="totalDebitAmount"></h3>
-            <div>
-                <h3>Exteriors:</h3>
-                <ul id="exteriors"></ul>
-            </div>
-            <div>
-                <h3>Tips:</h3>
-                <ul id="tips"></ul>
-            </div>
-            <h3 id="tipAndExt"></h3>
-            <h2 id="balance"></h2>  
 
-        </div>
-        
-        
-    </body>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Kevin Baggott</p>
+    </footer>
+
+
+</body>
 </html>
