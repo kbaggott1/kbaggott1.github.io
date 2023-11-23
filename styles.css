@@ -290,6 +290,7 @@ iframe {
     .project p {
         font-size: medium;
         margin-left: 0;
+        margin: 15px;
         margin-top: 20px;
         text-align: justify;
         max-width: 80vw;
