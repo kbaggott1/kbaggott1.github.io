@@ -86,6 +86,7 @@ section {
     font-size: x-large;
     margin-left: 50px;
     margin-top: 20px;
+    max-width: 80vw;
 }
 
 .project .images {
@@ -185,10 +186,6 @@ li a {
     font-size: x-large;
 }
 
-.project p {
-    max-width: 80vw;
-}
-
 iframe {
     height: 800px;
     width: 900px;
@@ -260,10 +257,43 @@ iframe {
     img {
         display: none;
     }
+    .hide-mobile {
+        display: none !important; 
+    }
 
     .about-me-container p {
         margin: 0;
         font-size: medium;
         text-align: justify;
+    }
+
+    .project {
+        align-items: center;
+    }
+
+    .project p {
+        font-size: medium;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: justify;
+        max-width: 80vw;
+    }
+
+    .project h3 {
+        font-size: x-large;
+        margin-left: 0;
+    }
+
+    .project button {
+        margin: 0;
+    }
+
+    #bravo-button-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #bravo-button-div button {
+        margin-top: 10px;
     }
   }
