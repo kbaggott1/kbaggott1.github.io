@@ -285,7 +285,7 @@ iframe {
     }
 
     .about-me-container p {
-        margin: 0;
+        margin: 5px;
         font-size: medium;
         text-align: justify;
     }
