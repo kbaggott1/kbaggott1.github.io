@@ -11,7 +11,7 @@ body, h1, h2, p, ul, li, a {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #ececec; /* Light gray background */
     display: flex;
     flex-direction: column;
@@ -232,6 +232,10 @@ iframe {
 .about-me-container img {
     max-width: 45%;
     margin-right: 50px;
+    border-radius: 10px;
+    border-color: rgb(204 204 204);
+    border-style: solid;
+    border-width: 2px;
 }
 
 .about-me-container p {
@@ -261,10 +265,22 @@ iframe {
         display: none !important; 
     }
 
+    .about-me-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .about-me-container p {
         margin: 0;
         font-size: medium;
         text-align: justify;
+    }
+
+    .about-me-container img {
+        display: block !important;
+        max-width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
     }
 
     .project {
