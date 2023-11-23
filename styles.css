@@ -313,9 +313,9 @@ iframe {
     }
 
     #used-tech-div img {
+        display: block !important;
         margin: 15px;
         max-width: 20%;
-        display: block;
     }
 
     .project {
