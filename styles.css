@@ -99,6 +99,7 @@ section {
 .project-title-div {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .project-title-div img {
@@ -133,6 +134,11 @@ section {
 .project button:hover {
     background-color: #635ab9; /* Darker shade for hover effect */
     border: 2px solid #635ab9; /* Darker border on hover */
+}
+
+.project  .tech-icon-div {
+    display: flex;
+    flex-direction: row;
 }
 
 footer {
@@ -244,8 +250,16 @@ iframe {
     text-align: justify;
 }
 
+#mobile-disclaimer {
+    display: None;
+}
+
 
 @media (max-width: 768px) {
+    #mobile-disclaimer {
+        display: block;
+    }
+
     .contact-card {
       width: calc(100% - 10px);
     }
@@ -302,6 +316,26 @@ iframe {
     }
 
     .project button {
+        margin: 0;
+    }
+
+    .project-title-div {
+        flex-direction: column;
+    }
+
+    .project-title-div img {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .tech-icon-div {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .tech-icon {
+        display: block;
+        width: 17%;
         margin: 0;
     }
 
