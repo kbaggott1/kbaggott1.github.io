@@ -256,10 +256,18 @@ function createBillNumField() {
 }
 
 function setExterior(exterior, extAmount, receiptAmount) {
-    const totalTax = 1.14975; //Need to remove tax before adding getting TVQ
-    const TVQ = 0.09975; //9.975%
+    //---------------------------------------------------------------
+    // THIS NEEDS TO BE UPDATED  IF THE FEDERAL OR PROVINCIAL CHANGE
+    const TPS = 0.001941 // I dont not understand why the federal is at 0.19% but wtv
+    const TVQ = 0.09975;
+    const TAX = TPS + TVQ;
+    //---------------------------------------------------------------
+
+    const EXTERIOR_PERCENTAGE = TVQ // if TVQ ever changes change this to 0.10
+
     if(exterior.checked) {
-        extAmount.value = round(((parseFloat(receiptAmount.value) / totalTax) * TVQ), 2);
+        //
+        extAmount.value = round(((parseFloat(receiptAmount.value) / (1 + TAX)) * EXTERIOR_PERCENTAGE), 2);
         extAmount.value = receiptAmount.dataset.billnum + " - " + extAmount.value;
     }
     else {
